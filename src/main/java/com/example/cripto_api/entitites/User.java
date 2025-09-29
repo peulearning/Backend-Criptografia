@@ -17,7 +17,7 @@ public class User {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-  private String userDocumenString;
+  private String userDocument;
   private String creditCardToken;
   private Long value;
 
