@@ -37,11 +37,12 @@ public class UserService {
         return user;
     }
 
-  public void deleteUser(Long id) throws Exception {
+  public boolean deleteUser(Long id) throws Exception {
     if (!userRepository.existsById(id)) {
       throw new Exception("User not found");
     }
     userRepository.deleteById(id);
+    return false;
   }
 
 
