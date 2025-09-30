@@ -1,8 +1,15 @@
 package com.example.cripto_api.repositories;
 
 import com.example.cripto_api.entitites.User;
-import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UserRepository {
+
+  User save(User user);
+
+  Object findById(Long id);
+
+  boolean existsById(Long id);
+
+  void deleteById(Long id);
 
 }
